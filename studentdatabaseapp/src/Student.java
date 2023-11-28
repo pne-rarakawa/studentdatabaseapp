@@ -5,7 +5,7 @@ public class Student {
     private String lastName;
     private String gradeYear;
     private String studentID;
-    private String courses = null;
+    private String courses = "";
     private int tuitionBalance = 0;
     private static int costOfCourse = 600;
     private static int id = 1000;
@@ -14,13 +14,13 @@ public class Student {
     
     public Student() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Enter student first name: ");
+        System.out.print("Enter student first name: ");
         this.firstName = in.nextLine();
 
-        System.out.println("Enter student last name: ");
+        System.out.print("Enter student last name: ");
         this.lastName = in.nextLine();
 
-        System.out.println("1 - Freshmen\n2 - Sophomore\n3 - Junior\n4 - Senior\nEnter student class level: ");
+        System.out.print("1 - Freshmen\n2 - Sophomore\n3 - Junior\n4 - Senior\nEnter student class level: ");
         this.gradeYear = in.nextLine();
 
         setStudentID();
