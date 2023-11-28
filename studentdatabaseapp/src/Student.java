@@ -43,14 +43,12 @@ public class Student {
             Scanner in = new Scanner(System.in);
             String course = in.nextLine();
             if (!course.equals("Q")) {
-                courses = courses + "\n" + course;
+                courses = courses + "\n  " + course;
                 tuitionBalance = tuitionBalance + costOfCourse;
             } else {
                 break;
             }
         } while (1 != 0);
-        System.out.println("ENROLLED IN: " + courses);
-        System.out.println("TUITION BALANCE: " + tuitionBalance);
     }
 
     // View balance
@@ -71,6 +69,10 @@ public class Student {
 
     // Show status
     public String showInfo() {
-        return "Name: " + firstName + " " + lastName + "\nCourses Enrolled: " + courses + "\nBalance: $" + tuitionBalance;
+        return "Name: " + firstName + " " + lastName +
+        "\nStudent ID: " + studentID +
+        "\nGrade Level: " + gradeYear +
+        "\nCourses Enrolled: " + courses + 
+        "\nBalance: $" + tuitionBalance;
     }
 }
